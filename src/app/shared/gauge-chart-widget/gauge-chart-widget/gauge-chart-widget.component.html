@@ -1,0 +1,49 @@
+<div [ngStyle]="{height: module === 'EV' ? '85%' : '93%'}" class="box-border" style="border-radius: 18px;">
+    <div class="row">
+        <div class="col-xs-12 top-header">{{widgetName}}</div>
+    </div>
+    <div class="row chart-content">
+        <!-- <rg-gauge-chart
+      [canvasWidth]="canvasWidth"
+      [needleValue]="needleValue"
+      [centralLabel]="centralLabel"
+      [options]="options"
+      [name]="name"></rg-gauge-chart> -->
+        <kendo-radialgauge [pointer]="{ value: needleValue,color:'gray' }"
+            style="display:block; width: 125px; height: 125px;padding-left: 2%;">
+            <kendo-radialgauge-scale [minorUnit]="5" [majorUnit]="10" [max]="defaultMax"
+                [majorTicks]="{ visible: false}" [minorTicks]="{ visible: false }" [startAngle]="0" [endAngle]="180">
+                <kendo-radialgauge-scale-labels format="c" [visible]="false">
+                </kendo-radialgauge-scale-labels>
+                <kendo-radialgauge-scale-ranges>
+                    <kendo-radialgauge-scale-range [from]="0" [to]="10" [color]="'darkred'">
+                    </kendo-radialgauge-scale-range>
+                    <kendo-radialgauge-scale-range [from]="10" [to]="25" [color]="'orange'">
+                    </kendo-radialgauge-scale-range>
+                    <kendo-radialgauge-scale-range [from]="25" [to]="45" [color]="'yellow'">
+                    </kendo-radialgauge-scale-range>
+                    <kendo-radialgauge-scale-range [from]="45" [to]="80" [color]="'lightgreen'">
+                    </kendo-radialgauge-scale-range>
+                    <kendo-radialgauge-scale-range [from]="80" [to]="100" [color]="'green'">
+                    </kendo-radialgauge-scale-range>
+                </kendo-radialgauge-scale-ranges>
+            </kendo-radialgauge-scale>
+        </kendo-radialgauge>
+    </div>
+    <div class="row bottom-label-content">
+        <div class="text-center">
+            <p>{{widgetData}}</p>
+        </div>
+    </div>
+    <div class="row range">
+        <div class="col col-style" *ngIf="min">Min : {{min}}</div>
+        <div class="col col-style" *ngIf="max">Max : {{max}}</div>
+    </div>
+    <!-- <div class="custom-row">
+      <div class="col widget-footer-left widget-footer" [ngStyle]="{'background-color':leftFooterName === 'OK' ? 'green' : 'darkred' }">
+        {{leftFooterName}}
+      </div>
+      <div class="col widget-footer-right widget-footer">
+      </div>
+    </div> -->
+</div>

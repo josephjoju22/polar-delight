@@ -1,0 +1,133 @@
+<div [ngClass]="module === 'EV' ? 'h85' : 'h100'" class="box-border br18"
+  *ngIf="widget_1.includes(widgetName) || type === 'widget_1'">
+  <div class="row">
+    <div class="col-xs-12 top-header">{{widgetName}}</div>
+  </div>
+  <div class="row content-align">
+    <div class="text-center">
+      <p>{{widgetData}}</p>
+    </div>
+
+  </div>
+  <div class="row range">
+    <div class="col col-style" *ngIf="min">Min : {{min}}</div>
+    <div class="col col-style" *ngIf="max">Max : {{max}}</div>
+  </div>
+  <div [ngClass]="{'custom-row-pos': module === 'EV'}" class="custom-row">
+    <div *ngIf="leftFooterName" class="col widget-footer-left widget-footer mx-5"
+      [ngStyle]="{'background-color':leftFooterName === 'OK' ? 'green' : 'darkred' }">
+      {{leftFooterName}}
+    </div>
+
+  </div>
+</div>
+
+<div [ngClass]="module === 'EV' ? 'h85' : 'h100'" class="box-border br18"
+  *ngIf="widget_2.includes(widgetName) || type === 'widget_2'">
+  <div class="row">
+    <div class="col-xs-12 top-header">{{widgetName}}</div>
+  </div>
+  <div class="row content-align">
+    <div class="text-center" *ngIf='widgetData == "Complete"; else Inprogress'>
+      <i class="bi bi-check-circle-fill" aria-hidden="true" style='color:green;'></i>
+    </div>
+    <ng-template #Inprogress>
+      <div class="text-center">
+        <!-- <i class="fa fa-hourglass-half" aria-hidden="true" style='color:red;font-size: 30px;'></i> -->
+        <img src="assets/images/LoadingIcon.gif" alt="Inprogress" class="inprogres-image" />
+      </div>
+    </ng-template>
+  </div>
+
+
+  <div [ngClass]="{'custom-row-pos': module === 'EV'}" class="custom-row" style='margin-top:20px;'>
+    <div *ngIf="widgetData" class="col widget-footer-left widget-footer mx-5"
+      [ngStyle]="{'background-color':leftFooterName === 'OK' ? 'green' : 'darkred' }">
+      {{widgetData}}
+    </div>
+
+  </div>
+</div>
+
+<div [ngClass]="module === 'EV' ? 'h85' : 'h100'" class="box-border br18"
+  *ngIf="widget_3.includes(widgetName) || type === 'widget_3'">
+  <div class="row">
+    <div class="col-xs-12 top-header">{{widgetName}}</div>
+  </div>
+  <div class="row content-align">
+    <div class="text-center">
+      <p>{{widgetData}}</p>
+    </div>
+  </div>
+  <div class="row range">
+    <div class="col col-style" *ngIf="min">Min : {{min}}</div>
+    <div class="col col-style" *ngIf="max">Max : {{max}}</div>
+  </div>
+  <div [ngClass]="{'custom-row-pos': module === 'EV'}" class="custom-row">
+    <div class="col widget-footer-left widget-footer ml-5 mr-5"
+      [ngStyle]="{'background-color':leftFooterName === 'OK' ? 'green' : 'darkred' }">
+      {{leftFooterName}}
+    </div>
+
+  </div>
+</div>
+
+<div [ngClass]="module === 'EV' ? 'h85' : 'h100'" class="box-border br18"
+  *ngIf="widget_4.includes(widgetName) || type === 'widget_4'">
+  <div class="row">
+    <div class="col-xs-12 top-header">{{widgetName}}</div>
+  </div>
+  <div class="row content-align">
+    <div class="text-center" *ngIf='widgetData == "Up"; else DOWN'>
+      <i class="fa fa-arrow-up" aria-hidden="true" style='color:green;'></i>
+    </div>
+    <ng-template #DOWN>
+      <div class="text-center">
+        <i class="fa fa-arrow-down" aria-hidden="true" style='color:orange;'></i>
+      </div>
+    </ng-template>
+  </div>
+
+
+  <div [ngClass]="{'custom-row-pos': module === 'EV'}" class="custom-row" style='margin-top:20px;'>
+    <div *ngIf="leftFooterName" class="col widget-footer-left widget-footer mx-5"
+      [ngStyle]="{'background-color':leftFooterName === 'OK' ? 'green' : 'darkred' }">
+      {{leftFooterName}}
+    </div>
+    <!-- <div class="col widget-footer-right widget-footer"> -->
+    <!-- <img *ngIf="rightFooterName==='UP'" src="assets/images/up_green.png" alt="Up" class="trending-image"/>
+      <img *ngIf="rightFooterName!='UP'"src="assets/images/down_red.png" alt="Down" class="trending-image"/> -->
+    <!-- </div> -->
+  </div>
+</div>
+
+<!-- Widget for only display name and center align data no min/max and button-->
+<div [ngClass]="module === 'EV' ? 'h85' : 'h100'" class="box-border br18"
+  *ngIf="widget_5.includes(widgetName) || type === 'widget_5'">
+  <div class="row">
+    <div class="col-xs-12 top-header">{{widgetName}}</div>
+  </div>
+  <div class="row text-position-center">
+    <div class="text-center">
+      <p>{{widgetData}}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Widget for only display list-->
+<div [ngClass]="module === 'EV' ? 'h85' : 'h100'" class="box-border br18 widget_6" *ngIf="type === 'widget_6'">
+  <div class="row">
+    <div class="col-xs-12 top-header">{{widgetName}}</div>
+  </div>
+  <!-- <div class="row">
+    <ul>
+      <li *ngFor="let list of widgetData">{{list.name}} - {{list.value}}</li>
+    </ul>
+  </div> -->
+  <div class="widget_6__body">
+    <div class="row pl-4 pr-4 widget_6__body__list" *ngFor="let list of widgetData">
+      <div class="col-9 text-left">{{list.name}}</div>
+      <div class="col-3 text-right pl-0">{{list.value}} pods</div>
+    </div>
+  </div>
+</div>

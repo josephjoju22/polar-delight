@@ -21,12 +21,20 @@
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "@popperjs/core": "^2.11.8",
+    "@progress/kendo-angular-gauges": "^15.1.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "popper.js": "^1.16.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@progress/kendo-drawing": "^1.19.0",
+    "@progress/kendo-licensing": "^1.0.2",
+    "@progress/kendo-angular-common": "15.1.0",
+    "@progress/kendo-angular-intl": "15.1.0",
+    "@progress/kendo-angular-l10n": "15.1.0",
+    "@angular/localize": "^14.2.0",
+    "@progress/kendo-theme-default": "^7.2.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.13",

@@ -1,0 +1,38 @@
+<div *ngIf="screenName !== 'cnc'" class="card card-container"
+    [ngStyle]="{'width':screenName == 'summary' ? '100%' : (screenName == 'summary1' ? '100%' : '100%'),'height': '79%', 'border-color':cardFooterColor}">
+
+    <div class="attribute-value">
+        <p [ngStyle]="{'font-size':screenName == 'operation' ? '12pt' :'12pt' }">{{attributeValue}}{{unit}}</p>
+    </div>
+    <div class="attribute">
+        <p>{{attribute}}</p>    
+    </div>
+    <!-- <img *ngIf="imageName!=null" src='{{ "assets/images/" + imageName }}' alt="card-image" class="card-image" /> -->
+
+    <!-- <div class="footer" [ngStyle]="{'background-color':cardFooterColor}">
+  </div> -->
+</div>
+
+<div *ngIf="screenName === 'cnc'"
+    [ngStyle]="{'width':screenName == 'cnc' ? '100%' : (screenName == 'summary1' ? '100%' : '100%'), 'height': '79%', 'border-color':cardFooterColor}"
+    class="card card-container">
+    <div class="row">
+        <div class="pr-0 col-md-4">
+            <div class="attribute-value">
+                <p [ngStyle]="{'font-size':screenName == 'cnc' ? '12pt' :'12pt' }">{{attributeValue}}{{unit}}</p>
+            </div>
+            <div class="attribute">
+                <p>{{attribute}}</p>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="attribute-value">
+                <p [ngStyle]="{'font-size':screenName == 'cnc' ? '10pt' :'10pt' }">{{attributeValue1}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- <img *ngIf="imageName!=null" src='{{ "assets/images/" + imageName }}' alt="card-image" class="card-image" /> -->
+
+    <!-- <div class="footer" [ngStyle]="{'background-color':cardFooterColor}">
+  </div> -->
+</div>

@@ -1,0 +1,112 @@
+<div class="container" style="max-width: 94%;width: 100%;">
+    <div class="row">
+        <div class="col-md-2 mt-2">
+            <div class="row">
+                <img src="assets/images/polar_delight_machine-new.png" alt="Polar Delight" class="img-machine" />
+            </div>
+            <div class="col-sm-12">
+                <div class="assetIdDropdn">
+                    <div class="form-group">
+                        <label for="demo_overview">Asset</label>
+                        <select class="form-control" data-role="select-dropdown" (change)="onChnageOfAsset($event)">
+                            <option *ngFor="let asset of assetIdList">
+                                {{asset}}
+                            </option>
+
+                        </select>
+                    </div>
+                </div>
+                <ul class="image-attributes" style="margin-bottom: 0;padding:0;">
+                    <!-- <p>Asset Id : {{pdOperationData.assetId}}</p> -->
+                    <p>Location : {{assetLocation}}</p>
+                </ul>
+            </div>
+            <div class="row">
+                <button class="btn btn-primary digitalTwnBtn">
+                    <a (click)="openDialog()">Digital Twin</a>
+                </button>
+
+            </div>
+        </div>
+        <div class="col-md-10 mt-2">
+            <div class="row">
+              <div class="col">
+                <app-custom-number-card [cardFooterColor]="pdOperationData.machineStatus === 'Online' ? 'green' : 'darkred'"
+                  [attribute]="'Machine Status'" [attributeValue]="pdOperationData.machineStatus" [imageName]=""
+                  [screenName]="'operation'"></app-custom-number-card>
+              </div>
+              <div class="col col-style">
+                <app-custom-number-card [cardFooterColor]="'green'" [attribute]="'POD Code'"
+                  [attributeValue]="pdOperationData.podCode" [imageName]="" [screenName]="'operation'">
+                </app-custom-number-card>
+      
+              </div>
+              <div class="col col-style">
+                <app-custom-number-card [cardFooterColor]="pdOperationData.cupDetect === 'Yes' ? 'green' : 'darkred'"
+                  [attribute]="'Cup Detect'" [attributeValue]="pdOperationData.cupDetect" [imageName]="'ice-cream-cup.png'"
+                  [screenName]="'operation'"></app-custom-number-card>
+              </div>
+              <div class="col col-style">
+                <app-custom-number-card [cardFooterColor]="pdOperationData.podBinDoor === 'Closed' ? 'green' : 'darkred'"
+                  [attribute]="'POD Bin Door'" [attributeValue]="pdOperationData.podBinDoor" [imageName]=""
+                  [screenName]="'operation'"></app-custom-number-card>
+              </div>
+              <div class="col col-style">
+                <app-custom-number-card [cardFooterColor]="pdOperationData.customerDoor === 'Closed' ? 'green' : 'darkred'"
+                  [attribute]="'Customer Door'" [attributeValue]="pdOperationData.customerDoor" [imageName]=""
+                  [screenName]="'operation'"></app-custom-number-card>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                  <app-gauge-chart-widget [widgetData]="pdOperationData.assetHealthData.assetHealth"
+                    [widgetName]="'Asset Health'" [needleValue]="pdOperationData.assetHealthData.needleValue">
+                  </app-gauge-chart-widget>
+                </div>
+                <div class="col-md-3 col-style1">
+                    <app-gauge-chart-widget [widgetData]="pdOperationData.freezerTemperatureData.freezerTemperature+' °F'"
+                      [widgetName]="'Freezer Temperature'" [min]="pdOperationData.freezerTemperatureData.min+' °F'"
+                      [max]="pdOperationData.freezerTemperatureData.max+' °F'"
+                      [needleValue]="pdOperationData.freezerTemperatureData.needleValue"></app-gauge-chart-widget>
+                  </div>
+                  <div class="col-md-3 col-style1">
+                    <app-gauge-chart-widget [widgetData]="pdOperationData.dispensePressureData.dispensePressure+' lb'"
+                      [widgetName]="'Dispense Force'" [min]="pdOperationData.dispensePressureData.min+' lb'"
+                      [max]="pdOperationData.dispensePressureData.max+' lb'"
+                      [needleValue]="pdOperationData.dispensePressureData.needleValue"></app-gauge-chart-widget>
+                  </div>
+                  <div class="col-md-3 col-style1">
+                    <app-gauge-chart-widget [widgetData]="pdOperationData.cycleTimeData.cycleTime+' sec'"
+                      [widgetName]="'Cycle time'" [min]="pdOperationData.cycleTimeData.min+' sec'"
+                      [max]="pdOperationData.cycleTimeData.max+' sec'" [needleValue]="pdOperationData.cycleTimeData.needleValue">
+                    </app-gauge-chart-widget>
+                  </div>
+            </div>
+            <div class="row" style="margin-top: -10px;">
+                <div class="col-md-3">
+                  <app-card-widget [widgetData]="pdOperationData.maxRamLoadData.ramLoad+' kg'" [widgetName]="'Max RAM Load'"
+                    [leftFooterName]="pdOperationData.maxRamLoadData.status" [min]="pdOperationData.maxRamLoadData.min+' kg'"
+                    [max]="pdOperationData.maxRamLoadData.max+' kg'"></app-card-widget>
+                </div>
+                <div class="col-md-3 col-style1">
+                    <app-card-widget [widgetData]="pdOperationData.cycleStatusData.cycleStatus" [widgetName]="'Cycle Status'"
+                      [leftFooterName]="pdOperationData.cycleStatusData.status"></app-card-widget>
+                  </div>
+                  <div class="col-md-3 col-style1">
+                    <app-card-widget [widgetData]="pdOperationData.ramPositionData.ramPosition+' mm'"
+                      [widgetName]="'RAM Position'" [leftFooterName]="pdOperationData.ramPositionData.status"
+                      [min]="pdOperationData.ramPositionData.min+'mm'" [max]="pdOperationData.ramPositionData.max+'mm'">
+                    </app-card-widget>
+                  </div>
+                  <div class="col-md-3 col-style1">
+                    <app-card-widget 
+                    type="widget_6"
+                    widgetName="Freezer Inventory"
+                    [widgetData]="capPosition"
+                    ></app-card-widget>
+                  </div>
+                  
+            </div>
+        </div>
+    </div>
+</div>

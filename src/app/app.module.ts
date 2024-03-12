@@ -10,6 +10,13 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { DatePipe } from '@angular/common';
 import { MatTabsModule } from '@angular/material/tabs';  
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { RolePipe } from './shared/custom-pipe/role.pipe';
+import { PdOperationsComponent } from './feature/pd-operations/pd-operations/pd-operations.component';
+import { CustomNumberCardComponent } from './shared/custom-number-card/custom-number-card/custom-number-card.component';
+import { GaugeChartWidgetComponent } from './shared/gauge-chart-widget/gauge-chart-widget/gauge-chart-widget.component';
+import { GaugesModule } from '@progress/kendo-angular-gauges';
+import { CardWidgetComponent } from './shared/card-widget/card-widget/card-widget.component';
+
 
 
 
@@ -18,7 +25,12 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
   declarations: [
     AppComponent,
     HeaderComponent,
-    PolarDelightComponent
+    PolarDelightComponent,
+    RolePipe,
+    PdOperationsComponent,
+    CustomNumberCardComponent,
+    GaugeChartWidgetComponent,
+    CardWidgetComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +38,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatTabsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    GaugesModule
 
   ],
   providers: [

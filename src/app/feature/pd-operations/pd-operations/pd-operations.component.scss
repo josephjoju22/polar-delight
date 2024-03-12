@@ -1,0 +1,134 @@
+.top-card{
+    margin-top : 2px;
+  }
+  .image-attributes{
+    color: rgb(209, 209, 209);
+  }
+  .col, .col-md-3{
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .col-style{
+    padding-left: 5px;
+  }
+  .col-style1{
+    padding-left: 5px;
+  }
+  
+  .button {
+    position: relative;
+    background: #0E84A1;
+    display: inline-block;
+    height: 41px;
+    width: 145px;
+    border-radius: 50em;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  
+  @media (min-width: 641px) {
+    .button-img{
+      margin-top: 5%;
+      width: 32px;
+    }
+    .button-font{
+      margin-left: 4%;
+    }
+    .img-machine{
+      height: 264px;
+    }
+    .digitalTwnBtn{
+      font-size: 12px !important;
+    }
+    .assetIdDropdn{
+      width:90px !important;
+    }
+  }
+  
+  @media (min-width: 961px) {
+    .button-img{
+      margin-top: 2%;
+      width: 39px;
+    }
+    .button-font{
+      margin-left: 16%;
+    }
+    .img-machine{
+      height: 335px;
+    }
+    .digitalTwnBtn{
+      font-size: 14px !important;
+    }
+  }
+  /* .img-machine{
+    height: 344px;
+  } */
+  @media (min-width: 1025px) {
+    .button-img{
+      margin-top: 2%;
+      width: 39px;
+    }
+    .button-font{
+      margin-left: 16%;
+    }
+    .img-machine{
+      height: 310px;
+    }
+    .assetIdDropdn{
+      width:60% !important;
+    }
+  }
+  
+  @media (min-width :1112px){
+    .assetIdDropdn{
+      width:85% !important;
+    }
+  }
+  @media (min-width: 1281px) {
+    .button-img{
+      margin-top: 2%;
+      width: 39px;
+    }
+    .button-font{
+      margin-left: 16%;
+    }
+    .img-machine{
+      height: 310px;
+    }
+    .assetIdDropdn{
+      width:60% !important;
+    }
+  }
+  @media (min-width: 1360px) {
+    .button-img{
+      margin-top: 2%;
+      width: 39px;
+    }
+    .button-font{
+      margin-left: 16%;
+    }
+    .img-machine{
+      height: 345px;
+    }
+  }
+  
+  .container{
+    zoom:97%;
+    margin-left:3%;
+  }
+  .digitalTwnBtn{
+    background: darkturquoise;
+    border: navajowhite;
+  }
+  .assetIdDropdn select{
+    background-color:black;
+    color:white;
+  }
+  .assetIdDropdn select option{
+    background-color:white;
+    color:black;
+  }
+  .assetIdDropdn label{
+    color: rgb(209, 209, 209);
+  }
