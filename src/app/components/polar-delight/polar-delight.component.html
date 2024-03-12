@@ -1,0 +1,57 @@
+<div>
+    <app-header></app-header>
+  </div>
+  <div class="container1"
+  [ngStyle]="{'width.px':innerWidth+140,'min-width.px':innerWidth+90}">
+  <div class="row text-content" [ngStyle]="{'width.px':innerWidth+130}">
+    <div class="col-5 text-right text-style1">
+      <a>
+        <img class="header-logo-image" src="assets/images/PolarDelight.png" width="160px" alt="Logo">
+      </a>
+    </div>
+    <div class="col-5">
+        <p  style="font-size: 22px; color: white;">Digital Twin</p>
+    </div>
+    <!-- <div class="col-sm-4 text-right text-style2">{{from | date | date:'mediumDate'}} to {{to | date | date:'mediumDate'}}</div> -->
+    <div class="col-2 text-right text-style2" style="margin-left: auto ; color: white; ">{{currentDate}}</div>
+  </div>
+
+  <mat-tab-group mat-align-tabs="center"> 
+    <mat-tab label="Home" >Home Content</mat-tab> 
+    <mat-tab label="Overview">Overview Content</mat-tab> 
+  </mat-tab-group>
+
+  <!-- <mat-tab-group mat-align-tabs="left" dynamicHeight="true" [selectedIndex]="getSelectedIndex()"
+    (selectedTabChange)="tabChanged($event)">
+    <mat-tab label="Asset Health">
+      <ng-template matTabContent>
+        <app-pd-operations [assetId]="assetId"></app-pd-operations>
+      </ng-template>
+    </mat-tab> -->
+    <!-- <mat-tab label="Operations Summary" *ngIf='"OpSum" | role:userRole'>
+      <ng-template matTabContent>
+        <app-plant-performance></app-plant-performance>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Predictions" *ngIf='"predctions" | role:userRole'>
+      <ng-template matTabContent>
+        <app-pd-insights></app-pd-insights>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Insights" *ngIf='"Insights" | role:userRole'>
+      <ng-template matTabContent>
+        <div>
+          <app-real-time-feed></app-real-time-feed>
+        </div>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Remote Operations Cockpit" *ngIf='"serDash" | role:userRole'>
+      <ng-template matTabContent>
+        <div class="row">
+          <app-diagnostics></app-diagnostics>
+        </div>
+      </ng-template>
+    </mat-tab> -->
+  <!-- </mat-tab-group> -->
+  </div>
+      

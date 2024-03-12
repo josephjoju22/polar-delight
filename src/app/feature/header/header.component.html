@@ -1,0 +1,26 @@
+<mat-toolbar class="header">
+    <!-- <img src="assets/images/ey_logo.png" alt="EY Logo" class="ey-logo" /> -->
+    <img src="assets/images/EY_Logo_Beam_RGB.png" alt="EY Logo" class="ey-logo" />
+    <p class="title-content">Nottingham Spirk Innovation Hub</p>
+    <div class="toolbar-spacer"></div>
+    <!-- <button mat-raised-button (click)="logout()">Logout</button> -->
+    <div class="logoutDiv">
+    
+        <div class="dropdown mb-3">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-person-fill m-2" aria-hidden="true"></i>{{loggedInUser}}
+          </button>
+          <ul class="dropdown-menu">
+             <li *ngFor='let role of userRoles'>
+               <a (click)='userDefinedTabs(role)'><i class="bi bi-person-vcard m-2" aria-hidden="true"></i>{{role}}</a>
+             </li>
+             <li><a class="disabledLink"><i class="bi bi-gear-fill m-2" aria-hidden="true"></i>Settings</a></li>
+             <li><a (click)="logout()"><i class="bi bi-power m-2" aria-hidden="true"></i>Logout</a></li>
+          </ul>
+      </div>
+      <span class="roleDiv">{{ defaultuserRole }}</span>
+    </div>
+    <!-- <img src="assets/images/logout_1.png" alt="Logout" class="logout-logo" (click)="logout()"/> -->
+    <!-- <p class="logout-text" (click)="logout()">Logout</p> -->
+  </mat-toolbar>
+  

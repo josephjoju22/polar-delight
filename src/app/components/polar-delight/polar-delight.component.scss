@@ -1,0 +1,38 @@
+p {
+    font-family: Lato;
+  }
+
+  .logo-header {
+    line-height: 16.5px;
+    text-align: center;
+    color: white;
+    background-color: black;
+  }
+
+  .header-logo-image {
+    text-align: center;
+    margin: 20px 15px 15px 0px;
+    float: left;
+  }
+  .container1{
+    background-color: black;
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+   justify-content: flex-start;
+  }
+
+  .mat-tab-label {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+}
+.mat-tab-label.mat-tab-label-active {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color: red;
+    font-weight: 700;
+}
