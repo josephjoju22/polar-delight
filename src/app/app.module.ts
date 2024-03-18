@@ -16,6 +16,10 @@ import { CustomNumberCardComponent } from './shared/custom-number-card/custom-nu
 import { GaugeChartWidgetComponent } from './shared/gauge-chart-widget/gauge-chart-widget/gauge-chart-widget.component';
 import { GaugesModule } from '@progress/kendo-angular-gauges';
 import { CardWidgetComponent } from './shared/card-widget/card-widget/card-widget.component';
+import { PdInsightsComponent } from './feature/pd-insights/pd-insights.component';
+import { HorizontalLargeWidgetComponent } from './shared/horizontal-large-widget/horizontal-large-widget.component';
+import { NgxVerticalBarComponent } from './shared/ngx-charts/ngx-vertical-bar/ngx-vertical-bar.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 
@@ -31,6 +35,9 @@ import { CardWidgetComponent } from './shared/card-widget/card-widget/card-widge
     CustomNumberCardComponent,
     GaugeChartWidgetComponent,
     CardWidgetComponent,
+    PdInsightsComponent,
+    HorizontalLargeWidgetComponent,
+    NgxVerticalBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,8 @@ import { CardWidgetComponent } from './shared/card-widget/card-widget/card-widge
     MatToolbarModule,
     MatTabsModule,
     MatSlideToggleModule,
-    GaugesModule
+    GaugesModule,
+    NgxChartsModule
 
   ],
   providers: [

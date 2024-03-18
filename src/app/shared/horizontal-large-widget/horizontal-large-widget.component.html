@@ -1,0 +1,25 @@
+<div class="box-border">
+    <div class="row content-align">
+        <div class="col-xs-12 text-content">{{widgetName}}</div>
+    </div>
+    <div class="row content-align">
+        <!-- <app-ngx-gauge-chart *ngIf="widgetType === 'gauge-chart'" [gaugeInputData]="widgetData"></app-ngx-gauge-chart>
+      <app-ngx-line-chart *ngIf="widgetType === 'line-chart'" [lineChartInputData]="widgetData"></app-ngx-line-chart>
+      <app-d3-line-chart *ngIf="widgetType === 'd3-line-chart'"></app-d3-line-chart>
+      <app-progress-bar *ngIf="widgetType === 'progress-bar'" [progressBarValue]="widgetData"></app-progress-bar> -->
+        <app-ngx-vertical-bar *ngIf="widgetType === 'vertical-bar-chart'" [xAxisLabelName]="xAxisLabelName"
+            [yAxisLabelName]="yAxisLabelName" [isIssuesLoaded]="isIssuesLoaded"
+            [results]="widgetData"></app-ngx-vertical-bar>
+        <!-- <app-ngx-pie-grid *ngIf="widgetType === 'pie-grid'"></app-ngx-pie-grid>
+      <app-ngx-horizontal-bar *ngIf="widgetType === 'horizontal-bar-chart'"></app-ngx-horizontal-bar>
+      <app-ngx-pie-chart *ngIf="widgetType === 'pie-chart'"></app-ngx-pie-chart>
+      <app-ngx-stacked-area-chart *ngIf="widgetType === 'area-chart'"></app-ngx-stacked-area-chart>
+      <app-ngx-bubble-chart *ngIf="widgetType === 'bubble-chart'"></app-ngx-bubble-chart> -->
+
+
+    </div>
+    <div class="custom-row content-align">
+        <div class="col widget-footer-left widget-footer">{{leftFooterName}}</div>
+        <div class="col widget-footer-right widget-footer">{{rightFooterName}}</div>
+    </div>
+</div>
