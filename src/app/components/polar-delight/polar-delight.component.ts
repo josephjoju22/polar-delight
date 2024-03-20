@@ -88,7 +88,7 @@ export class PolarDelightComponent implements OnInit,OnDestroy {
   };
 
   getSelectedIndex(): number {
-    console.log(this.currentTabIndex);
+    // console.log(this.currentTabIndex);
     
     return this.currentTabIndex;
   }

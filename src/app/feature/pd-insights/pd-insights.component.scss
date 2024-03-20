@@ -1,0 +1,137 @@
+:host ::ng-deep svg>g>path{
+    fill: #2222;
+}
+:host ::ng-deep svg>g>g>g g:nth-child(12) path{
+    fill: none;
+}
+:host ::ng-deep svg>g>g>g g:nth-child(11) path{
+    fill: none;
+}
+:host ::ng-deep svg>g>g>g g:nth-child(10) path{
+    fill: none;
+}
+:host ::ng-deep svg>g>g>g g:nth-child(9) path{
+    fill: none;
+}
+
+:host ::ng-deep svg>g>g>g g:nth-child(12) text{
+    fill: darkgrey;
+}
+:host ::ng-deep svg>g>g>g g:nth-child(11) text{
+    fill: darkgrey;
+}
+:host ::ng-deep svg>g>g>g g:nth-child(10) text{
+    fill: darkgrey;
+}
+:host ::ng-deep svg>g>g>g g:nth-child(9) text{
+    fill: darkgrey;
+}
+
+:host ::ng-deep svg>g>g>g g:nth-child(4) text{
+    fill: darkgrey;
+}
+:host ::ng-deep svg>g>g>g g:nth-child(3) text{
+    fill: darkgrey;
+}
+:host ::ng-deep svg>g>g>g g:nth-child(2) text{
+    fill: darkgrey;
+}
+:host ::ng-deep svg>g g:nth-child(5)>g>g:nth-child(1)>g>text{
+    font-size: 12px !important;
+}
+:host ::ng-deep svg>g g:nth-child(5)>g>g:nth-child(2)>g>text{
+    font-size: 12px !important;
+}
+:host ::ng-deep svg>g g:nth-child(5)>g>g:nth-child(3)>g>text{
+    font-size: 12px !important;
+}
+:host ::ng-deep svg>g g:nth-child(5)>g>g:nth-child(4)>g>text{
+    font-size: 12px !important;
+}
+/* :host ::ng-deep svg>g g:nth-child(11) g g:nth-child(2) path{
+    font-size: 12px;
+}
+:host ::ng-deep svg>g g:nth-child(10) g g:nth-child(3) path{
+    font-size: 12px;
+} */
+/* :host ::ng-deep svg>g>g>g g:nth-child(12) path{
+    fill: #d69b36;
+}
+:host ::ng-deep svg>g>g>g g:nth-child(11) path{
+    fill: #2a7038;
+}
+:host ::ng-deep svg>g>g>g g:nth-child(10) path{
+    fill: #c3c4c2;
+}
+
+:host ::ng-deep svg>g g:nth-child(12) g g:nth-child(1) path{
+    fill: #d69b36;
+}
+:host ::ng-deep svg>g g:nth-child(11) g g:nth-child(2) path{
+    fill: #2a7038;
+}
+:host ::ng-deep svg>g g:nth-child(10) g g:nth-child(3) path{
+    fill: #c3c4c2;
+} */
+
+@media (min-width: 641px) {
+    .row-class{
+        margin-right: 0;
+    }
+    .row-class1{
+        margin-right: 0;
+    }
+  }
+  
+  @media (min-width: 961px) {
+    .row-class{
+        margin-right: 4px;
+    }
+    .row-class1{
+        margin-right: 0;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .row-class{
+        margin-right: 7px;
+    }
+    .row-class1{
+        margin-right: 0;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .row-class{
+        margin-right: 13px;
+    }
+    .row-class1{
+        margin-right: 0;
+    }
+  }
+
+  .body {
+      height: 550px !important;
+      max-height: 550px !important;
+  }
+
+
+  :host::ng-deep ::-webkit-scrollbar{
+    width: 5px !important;
+    height: 8px;
+  }
+  
+  /* Track */
+  :host::ng-deep ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  :host::ng-deep ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  :host::ng-deep ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }     

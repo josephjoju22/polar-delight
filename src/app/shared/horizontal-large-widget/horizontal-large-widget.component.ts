@@ -15,6 +15,7 @@ export class HorizontalLargeWidgetComponent implements OnInit {
   @Input() xAxisLabelName: string | undefined;
   @Input() yAxisLabelName: string | undefined;
   @Input() isIssuesLoaded: boolean | undefined;
+  @Input() series:any;
 
 
   constructor() { }

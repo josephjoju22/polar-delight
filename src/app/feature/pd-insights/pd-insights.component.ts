@@ -9,6 +9,7 @@ export class PdInsightsComponent implements OnInit {
 
   PRIORITY_LIST: any = [];
   MACHINE_ISSUES_LIST: any = [];
+  series:any=[]
 
   public xAxisLabelName = 'Problem Cause';
   public yAxisLabelName = 'Count';
@@ -23,6 +24,14 @@ export class PdInsightsComponent implements OnInit {
   innerHeight:any;
   height: number | any;
   offsetX: number | any;
+
+  public autofit = true;
+  public data: any[]=[];
+  public labelContent(e: any): string {
+    return e.value + "%";
+  }
+
+
 
   @HostListener('window:resize', ['$event'])
 
@@ -65,6 +74,27 @@ export class PdInsightsComponent implements OnInit {
       { name: "Software Failure", value: 6855 },
 
     ];
+
+    this.series = [{
+      name: 'Freezer temp out of range',
+      value: 28.04,
+      label: '28.04%'
+  }, 
+  {
+      name: 'Dispenser force out of range',
+      value: 25.90,
+      label: '25.90%'
+  },
+  {
+    name: 'Dispense stalled',
+    value: 24.00,
+    label: '24.00%'
+},{
+  name: 'Software Failure',
+  value: 22.03,
+  label: '22.03%'
+},
+];
   }
 
   finishLoading(){

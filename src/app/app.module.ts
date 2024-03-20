@@ -20,6 +20,10 @@ import { PdInsightsComponent } from './feature/pd-insights/pd-insights.component
 import { HorizontalLargeWidgetComponent } from './shared/horizontal-large-widget/horizontal-large-widget.component';
 import { NgxVerticalBarComponent } from './shared/ngx-charts/ngx-vertical-bar/ngx-vertical-bar.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import { NgxPieChartComponent } from './shared/ngx-charts/ngx-pie-chart/ngx-pie-chart.component';
+import { PlantPerformanceComponent } from './feature/plant-performance/plant-performance.component';
+
 
 
 
@@ -38,6 +42,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     PdInsightsComponent,
     HorizontalLargeWidgetComponent,
     NgxVerticalBarComponent,
+    NgxPieChartComponent,
+    PlantPerformanceComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     MatTabsModule,
     MatSlideToggleModule,
     GaugesModule,
-    NgxChartsModule
+    NgxChartsModule,
+    ChartsModule
 
   ],
   providers: [
