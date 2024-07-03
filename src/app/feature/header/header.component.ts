@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
     sessionStorage.removeItem('tsqExpressions');
     localStorage.removeItem('role');
     //this.authService.logout();
-    this.router.navigate(['/logout']);
+    this.router.navigate(['/login']);
   }
   userDefinedTabs(role = 'VP of Operations') {
     localStorage.setItem('role', role);

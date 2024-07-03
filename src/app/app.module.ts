@@ -23,6 +23,10 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { ChartsModule } from '@progress/kendo-angular-charts';
 import { NgxPieChartComponent } from './shared/ngx-charts/ngx-pie-chart/ngx-pie-chart.component';
 import { PlantPerformanceComponent } from './feature/plant-performance/plant-performance.component';
+import { MapComponent } from './shared/map/map.component';
+import { VerticalBarChartComponent } from './shared/vertical-bar-chart/vertical-bar-chart.component';
+import { ChartjsPieComponent } from './shared/chartjs-pie/chartjs-pie.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 
@@ -44,6 +48,11 @@ import { PlantPerformanceComponent } from './feature/plant-performance/plant-per
     NgxVerticalBarComponent,
     NgxPieChartComponent,
     PlantPerformanceComponent,
+    MapComponent,
+    VerticalBarChartComponent,
+    ChartjsPieComponent,
+    LoginComponent
+
   ],
   imports: [
     BrowserModule,

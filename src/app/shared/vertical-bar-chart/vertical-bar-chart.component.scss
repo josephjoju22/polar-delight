@@ -1,0 +1,45 @@
+:host ::ng-deep text {
+    fill: #d1d1d1;
+  }
+  
+  @media (min-width: 641px) {
+    :host ::ng-deep .ngx-charts {
+      width: 185px;
+      height: 180px;
+      border-radius: 18px;
+    }
+  }
+  @media (min-width: 834px) {
+    :host ::ng-deep .ngx-charts {
+      width: 196px;
+      height: 200px;
+    }
+  }
+  @media (min-width: 961px) {
+    :host ::ng-deep .ngx-charts {
+      width: 259px;
+      height: 194px;
+      border-radius: 18px;
+    }
+  }
+  @media (min-width: 1025px) {
+    :host ::ng-deep .ngx-charts {
+      width: 332px;
+      height: 197px;
+      border-radius: 18px;
+    }
+  }
+  @media (min-width: 1112px) and (min-height: 834px) {
+    :host ::ng-deep .ngx-charts {
+      width: 300px;
+      height: 260px;
+      border-radius: 18px;
+    }
+  }
+  @media (min-width: 1281px) {
+    :host ::ng-deep .ngx-charts {
+      width: 367px;
+      height: 201px;
+      border-radius: 18px;
+    }
+  }

@@ -1,0 +1,89 @@
+html, body {
+    margin: 0;
+}
+
+/* #myMap {
+    height: 445px;
+    width: 452px;
+} */
+
+.customInfobox {
+    max-width: 240px;
+    padding: 10px;
+    font-size: 5px;
+}
+
+.customInfobox .name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+}
+
+@media (min-width:641px)  { 
+    #myMap {
+        height: 381px;
+        /* width: 247px; */
+    }
+}
+
+@media (min-width:834px)  { 
+    #myMap {
+        height: 381px;
+        /* width: 279px; */
+    }
+}
+@media (min-width:961px)  {
+    #myMap {
+        height: 380px;
+        /* width: 361px; */
+    }
+ }
+@media (min-width:1025px) { 
+    #myMap {
+        height: 379px;
+        /* width: 467px; */
+    }
+}
+@media (min-width:1112px ) and (min-height : 834px) { 
+    #myMap {
+        height: 379px;
+        width: 396px;
+    }
+}
+@media (min-width:1281px) { 
+    #myMap {
+        height: 545px;
+        width: 526px;
+    }
+}
+@media (min-width:1360px) { 
+    #myMap {
+        height: 380px;
+        width: 502px;
+    }
+}
+@media (min-width:1410px)  and (min-height: 670px){ 
+    #myMap {
+        height: 474px;
+        width: 526px;
+    }
+}
+@media (min-width:1599px)  and (min-height: 750px){ 
+    #myMap {
+        height: 474px;
+        width: 600px;
+    }
+}
+@media (min-width:1700px)  and (min-height: 750px){ 
+    #myMap {
+        height: 541px;
+        width: 643px;
+    }
+}
+@media (min-width:1800px) { 
+    #myMap {
+        height: 542px;
+        width: 732px;
+    }
+}

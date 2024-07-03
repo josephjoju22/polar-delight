@@ -1,0 +1,24 @@
+<div style="width:100%;">
+	<!-- <canvas id="myChart"  #mainteChart></canvas> -->
+	<kendo-chart class="chart-style" [style.height.px]="150"  [transitions]="false">
+		<kendo-chart-series>
+		  <kendo-chart-series-item
+			[autoFit]="autofit"
+			  type="donut" [data]="data"
+			  categoryField="kind" field="share">
+			<kendo-chart-series-item-labels
+			  position="outsideEnd"
+			  color="#000"
+			  [content]="labelContent">
+			</kendo-chart-series-item-labels>
+		  </kendo-chart-series-item>
+		</kendo-chart-series>
+		<kendo-chart-legend [visible]="false"></kendo-chart-legend>
+	  </kendo-chart>
+	  <!-- <label>
+		<input type="checkbox" [(ngModel)]="autofit" />
+		<span>Toggle Autofit</span>
+	  </label> -->
+  
+	  
+</div>
